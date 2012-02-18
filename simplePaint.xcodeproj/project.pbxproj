@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB48418214EE587900342F2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB48418114EE587900342F2A /* UIKit.framework */; };
+		DB48418414EE587900342F2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB48418314EE587900342F2A /* Foundation.framework */; };
+		DB48418614EE587900342F2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB48418514EE587900342F2A /* CoreGraphics.framework */; };
+		DB48418C14EE587900342F2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB48418A14EE587900342F2A /* InfoPlist.strings */; };
+		DB48418E14EE587900342F2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB48418D14EE587900342F2A /* main.m */; };
+		DB48419214EE587900342F2A /* JCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB48419114EE587900342F2A /* JCAppDelegate.m */; };
+		DB48419814EE587900342F2A /* JCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB48419614EE587900342F2A /* JCViewController.xib */; };
+		DB4841A414EE58C200342F2A /* JCDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4841A314EE58C200342F2A /* JCDrawView.m */; };
+		DB4841A714EE598700342F2A /* JCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4841A614EE598700342F2A /* JCViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB48417D14EE587900342F2A /* simplePaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simplePaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB48418114EE587900342F2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB48418314EE587900342F2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB48418514EE587900342F2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB48418914EE587900342F2A /* simplePaint-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "simplePaint-Info.plist"; sourceTree = "<group>"; };
+		DB48418B14EE587900342F2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB48418D14EE587900342F2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB48418F14EE587900342F2A /* simplePaint-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "simplePaint-Prefix.pch"; sourceTree = "<group>"; };
+		DB48419014EE587900342F2A /* JCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCAppDelegate.h; sourceTree = "<group>"; };
+		DB48419114EE587900342F2A /* JCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCAppDelegate.m; sourceTree = "<group>"; };
+		DB48419714EE587900342F2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/JCViewController.xib; sourceTree = "<group>"; };
+		DB4841A214EE58C200342F2A /* JCDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDrawView.h; sourceTree = "<group>"; };
+		DB4841A314EE58C200342F2A /* JCDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDrawView.m; sourceTree = "<group>"; };
+		DB4841A514EE598600342F2A /* JCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCViewController.h; sourceTree = "<group>"; };
+		DB4841A614EE598700342F2A /* JCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB48417A14EE587900342F2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB48418214EE587900342F2A /* UIKit.framework in Frameworks */,
+				DB48418414EE587900342F2A /* Foundation.framework in Frameworks */,
+				DB48418614EE587900342F2A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB48417214EE587800342F2A = {
+			isa = PBXGroup;
+			children = (
+				DB48418714EE587900342F2A /* simplePaint */,
+				DB48418014EE587900342F2A /* Frameworks */,
+				DB48417E14EE587900342F2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB48417E14EE587900342F2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB48417D14EE587900342F2A /* simplePaint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB48418014EE587900342F2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB48418114EE587900342F2A /* UIKit.framework */,
+				DB48418314EE587900342F2A /* Foundation.framework */,
+				DB48418514EE587900342F2A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB48418714EE587900342F2A /* simplePaint */ = {
+			isa = PBXGroup;
+			children = (
+				DB48419014EE587900342F2A /* JCAppDelegate.h */,
+				DB48419114EE587900342F2A /* JCAppDelegate.m */,
+				DB4841A214EE58C200342F2A /* JCDrawView.h */,
+				DB4841A314EE58C200342F2A /* JCDrawView.m */,
+				DB4841A514EE598600342F2A /* JCViewController.h */,
+				DB4841A614EE598700342F2A /* JCViewController.m */,
+				DB48419614EE587900342F2A /* JCViewController.xib */,
+				DB48418814EE587900342F2A /* Supporting Files */,
+			);
+			path = simplePaint;
+			sourceTree = "<group>";
+		};
+		DB48418814EE587900342F2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB48418914EE587900342F2A /* simplePaint-Info.plist */,
+				DB48418A14EE587900342F2A /* InfoPlist.strings */,
+				DB48418D14EE587900342F2A /* main.m */,
+				DB48418F14EE587900342F2A /* simplePaint-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB48417C14EE587900342F2A /* simplePaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB48419B14EE587900342F2A /* Build configuration list for PBXNativeTarget "simplePaint" */;
+			buildPhases = (
+				DB48417914EE587900342F2A /* Sources */,
+				DB48417A14EE587900342F2A /* Frameworks */,
+				DB48417B14EE587900342F2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = simplePaint;
+			productName = simplePaint;
+			productReference = DB48417D14EE587900342F2A /* simplePaint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB48417414EE587800342F2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = AveCesar;
+			};
+			buildConfigurationList = DB48417714EE587800342F2A /* Build configuration list for PBXProject "simplePaint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB48417214EE587800342F2A;
+			productRefGroup = DB48417E14EE587900342F2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB48417C14EE587900342F2A /* simplePaint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB48417B14EE587900342F2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB48418C14EE587900342F2A /* InfoPlist.strings in Resources */,
+				DB48419814EE587900342F2A /* JCViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB48417914EE587900342F2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB48418E14EE587900342F2A /* main.m in Sources */,
+				DB48419214EE587900342F2A /* JCAppDelegate.m in Sources */,
+				DB4841A414EE58C200342F2A /* JCDrawView.m in Sources */,
+				DB4841A714EE598700342F2A /* JCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB48418A14EE587900342F2A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB48418B14EE587900342F2A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB48419614EE587900342F2A /* JCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB48419714EE587900342F2A /* en */,
+			);
+			name = JCViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB48419914EE587900342F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DB48419A14EE587900342F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB48419C14EE587900342F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "simplePaint/simplePaint-Prefix.pch";
+				INFOPLIST_FILE = "simplePaint/simplePaint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB48419D14EE587900342F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "simplePaint/simplePaint-Prefix.pch";
+				INFOPLIST_FILE = "simplePaint/simplePaint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB48417714EE587800342F2A /* Build configuration list for PBXProject "simplePaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB48419914EE587900342F2A /* Debug */,
+				DB48419A14EE587900342F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB48419B14EE587900342F2A /* Build configuration list for PBXNativeTarget "simplePaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB48419C14EE587900342F2A /* Debug */,
+				DB48419D14EE587900342F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB48417414EE587800342F2A /* Project object */;
+}
