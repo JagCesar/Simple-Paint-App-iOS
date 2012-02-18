@@ -10,11 +10,6 @@
 
 @interface JCDrawView()
 
-@property (nonatomic) CGPoint lastPoint;
-@property (nonatomic) CGPoint prePreviousPoint;
-@property (nonatomic) CGPoint previousPoint;
-@property (nonatomic) CGFloat lineWidth;
-
 - (CGPoint)calculateMidPointForPoint:(CGPoint)p1 andPoint:(CGPoint)p2;
 
 @end
@@ -27,22 +22,6 @@
 @synthesize drawImageView;
 @synthesize lineWidth;
 @synthesize currentColor;
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-//        [self setBackgroundColor:[UIColor greenColor]];
-//        [self setDrawImageView:[[UIImageView alloc] initWithFrame:frame]];
-//        [self addSubview:self.drawImageView];
-        
-        self.previousPoint = CGPointZero;
-        self.prePreviousPoint = CGPointZero;
-        self.lineWidth = 4.0;
-    }
-    return self;
-}
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -75,7 +54,6 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     [[self currentColor] setStroke];
-    [[self currentColor] setFill];
     
     CGContextSetAllowsAntialiasing(UIGraphicsGetCurrentContext(), true);
     CGContextSetShouldAntialias(UIGraphicsGetCurrentContext(), true);
@@ -125,21 +103,29 @@
     UITouch *touch = [touches anyObject];
     CGPoint currentPoint = [touch locationInView:self];
     
+    [self setLineWidth:1.0];
+    
     if ([touch tapCount] == 1) {
-        UIGraphicsBeginImageContext(self.frame.size);
-        [drawImageView.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), 4.0);
-        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.0, 0.0, 0.0, 1.0);
-        CGContextBeginPath(UIGraphicsGetCurrentContext());
-        CGContextSetAllowsAntialiasing(UIGraphicsGetCurrentContext(), YES);
-        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-        CGContextStrokePath(UIGraphicsGetCurrentContext());
+        UIGraphicsBeginImageContext(self.drawImageView.frame.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        [[self currentColor] setStroke];
         
         CGContextSetAllowsAntialiasing(UIGraphicsGetCurrentContext(), true);
         CGContextSetShouldAntialias(UIGraphicsGetCurrentContext(), true);
-        drawImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        [self.drawImageView.image drawInRect:CGRectMake(0, 0, self.drawImageView.frame.size.width, self.drawImageView.frame.size.height)];
+        
+        CGContextMoveToPoint(context, currentPoint.x, currentPoint.y);
+        CGContextAddLineToPoint(context, currentPoint.x, currentPoint.y);
+        
+        CGContextSetLineCap(context, kCGLineCapRound);
+        
+        CGContextSetLineWidth(context, 4.0);
+        
+        CGContextStrokePath(context);
+        
+        self.drawImageView.image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
 }

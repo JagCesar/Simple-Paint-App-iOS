@@ -15,6 +15,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        [(JCDrawView*)[self view] setPreviousPoint:CGPointZero];
+        [(JCDrawView*)[self view] setPrePreviousPoint:CGPointZero];
+        [(JCDrawView*)[self view] setLineWidth:1.0];
     }
     return self;
 }
