@@ -19,4 +19,6 @@
 @property (nonatomic) CGPoint previousPoint;
 @property (nonatomic) CGFloat lineWidth;
 
+- (UIImage *)image;
+
 @end
