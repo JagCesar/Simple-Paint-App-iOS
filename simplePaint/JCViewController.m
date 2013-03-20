@@ -50,6 +50,10 @@
     }
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.exportButton setEnabled:YES];
+}
+
 #pragma mark - IBActions
 
 - (IBAction)setBlackColor:(id)sender {
