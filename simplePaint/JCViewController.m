@@ -72,6 +72,10 @@
     [(JCDrawView*)[self view] setCurrentColor:[UIColor blueColor]];
 }
 
+- (IBAction)setWhiteColor:(id)sender {
+    [(JCDrawView*)[self view] setCurrentColor:[UIColor whiteColor]];
+}
+
 - (IBAction)reset:(id)sender {
     [[(JCDrawView*)[self view] drawImageView] setImage:nil];
     [self.exportButton setEnabled:NO];
