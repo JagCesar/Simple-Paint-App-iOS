@@ -72,8 +72,27 @@
     [[(JCDrawView*)[self view] drawImageView] setImage:nil];
 }
 
-- (IBAction)setWhiteColor:(id)sender {
-    [(JCDrawView*)[self view] setCurrentColor:[UIColor whiteColor]];
+- (IBAction)exportImage:(id)sender {
+    UIImage *image = [(JCDrawView *)[self view] image];
+    if (image != nil) {
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didExportWithError:contextInfo:), nil);
+    }
+}
+
+- (void)image:(UIImage *)image didExportWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSString *message = @"Image successfully saved to Camera Roll";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    
+    if (error) {
+        message = [NSString stringWithFormat:@"Couldn't save image.\n%@", [error localizedDescription]];
+        [alert setMessage:message];
+        [alert setCancelButtonIndex:[alert addButtonWithTitle:@"Okay"]];
+    } else {
+        [alert setCancelButtonIndex:[alert addButtonWithTitle:@"Done"]];
+    }
+    
+    [alert show];
+    alert = nil;
 }
 
 @end
