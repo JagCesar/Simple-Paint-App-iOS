@@ -78,8 +78,6 @@
     }
     
     CGContextSetLineWidth(context, self.lineWidth);
-    
-//    CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0);
     CGContextStrokePath(context);
     
     self.drawImageView.image = UIGraphicsGetImageFromCurrentImageContext();
