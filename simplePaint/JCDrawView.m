@@ -23,16 +23,8 @@
 @synthesize lineWidth;
 @synthesize currentColor;
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
     UITouch *touch = [touches anyObject];
     
     self.previousPoint = [touch locationInView:self];
