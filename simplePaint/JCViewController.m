@@ -74,6 +74,7 @@
 
 - (IBAction)reset:(id)sender {
     [[(JCDrawView*)[self view] drawImageView] setImage:nil];
+    [self.exportButton setEnabled:NO];
 }
 
 - (IBAction)exportImage:(id)sender {
