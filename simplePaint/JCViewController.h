@@ -11,11 +11,15 @@
 
 @interface JCViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *exportButton;
+
 - (IBAction)setBlackColor:(id)sender;
 - (IBAction)setRedColor:(id)sender;
 - (IBAction)setGreenColor:(id)sender;
 - (IBAction)setBlueColor:(id)sender;
-- (IBAction)reset:(id)sender;
 - (IBAction)setWhiteColor:(id)sender;
+
+- (IBAction)reset:(id)sender;
+- (IBAction)exportImage:(id)sender;
 
 @end

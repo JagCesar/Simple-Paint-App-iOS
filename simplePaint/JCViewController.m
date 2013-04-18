@@ -33,21 +33,6 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -63,6 +48,10 @@
     } else {
         return NO;
     }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.exportButton setEnabled:YES];
 }
 
 #pragma mark - IBActions
@@ -83,12 +72,36 @@
     [(JCDrawView*)[self view] setCurrentColor:[UIColor blueColor]];
 }
 
-- (IBAction)reset:(id)sender {
-    [[(JCDrawView*)[self view] drawImageView] setImage:nil];
-}
-
 - (IBAction)setWhiteColor:(id)sender {
     [(JCDrawView*)[self view] setCurrentColor:[UIColor whiteColor]];
+}
+
+- (IBAction)reset:(id)sender {
+    [[(JCDrawView*)[self view] drawImageView] setImage:nil];
+    [self.exportButton setEnabled:NO];
+}
+
+- (IBAction)exportImage:(id)sender {
+    UIImage *image = [(JCDrawView *)[self view] image];
+    if (image != nil) {
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didExportWithError:contextInfo:), nil);
+    }
+}
+
+- (void)image:(UIImage *)image didExportWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSString *message = @"Image successfully saved to Camera Roll";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    
+    if (error) {
+        message = [NSString stringWithFormat:@"Couldn't save image.\n%@", [error localizedDescription]];
+        [alert setMessage:message];
+        [alert setCancelButtonIndex:[alert addButtonWithTitle:@"Okay"]];
+    } else {
+        [alert setCancelButtonIndex:[alert addButtonWithTitle:@"Done"]];
+    }
+    
+    [alert show];
+    alert = nil;
 }
 
 @end
